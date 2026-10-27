@@ -30,7 +30,7 @@ public class Produto
         } 
 
         string codigoSku = $"{Codigo}-{cor.Codigo}-{tamanho.Codigo}";
-
+        
         var variacao = new Variacao(estoque, preco, tamanho, cor, codigoSku);
         _variacoes.Add(variacao);
     }
