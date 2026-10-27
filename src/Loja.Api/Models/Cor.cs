@@ -2,12 +2,13 @@ namespace Loja.Api.Models;
 
 public class Cor
 {
-    public int Id { get; init; }
+    public int Id { get; private set; }
     public string Nome { get; init; }
+    public string Codigo {get; init;}
 
-    public Cor(int id, string nome)
+    public Cor(string nome, string codigo)
     {
-        Id = id;
         Nome = nome;
+        Codigo = codigo.ToUpperInvariant();
     }
 }

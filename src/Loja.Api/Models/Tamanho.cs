@@ -4,14 +4,13 @@ namespace Loja.Api.Models;
 
 public class Tamanho
 {
-    public int Id { get; init; }
+    public int Id { get; private set; }
     public string Codigo { get; init; }
     public GrupoTamanho Grupo { get; init; }
 
-    public Tamanho(int id, string codigo, GrupoTamanho grupo)
+    public Tamanho(string codigo, GrupoTamanho grupo)
     {
-        Id = id;
-        Codigo = codigo;
+        Codigo = codigo.ToUpperInvariant();
         Grupo = grupo;
     }
 }
