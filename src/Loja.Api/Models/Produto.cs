@@ -11,6 +11,10 @@ public class Produto
     private readonly List<Variacao> _variacoes = new();
     public IReadOnlyCollection<Variacao> Variacoes => _variacoes;
 
+    #pragma warning disable CS8618
+    private Produto() { }
+    #pragma warning restore CS8618
+
     public Produto(string nome, string descricao, string codigo, Categoria categoria)
     {
         Nome = nome;

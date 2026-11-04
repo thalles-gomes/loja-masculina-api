@@ -10,6 +10,10 @@ public class Variacao
     public string CodigoSku { get; private set; }
     public int ProdutoId { get; private set; }
 
+    #pragma warning disable CS8618
+    private Variacao() {}
+    #pragma warning restore CS8618
+
     public Variacao(int estoque, decimal preco, Tamanho tamanho, Cor cor, string codigoSku)
     {
         Preco = preco;
